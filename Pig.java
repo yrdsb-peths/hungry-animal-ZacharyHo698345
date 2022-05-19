@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Dog here.
+ * Write a description of class Pig here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-
-public class Dog extends Actor
+public class Pig extends Actor
 {
     String name;
     
-    public Dog(String name)
+    public Pig(String name)
     {
         this.name = name;
     }
@@ -19,10 +18,10 @@ public class Dog extends Actor
     public void act()
     {
         
-        if(Greenfoot.isKeyDown("a")){
+        if(Greenfoot.isKeyDown("1")){
             move(-4);
         }
-        if(Greenfoot.isKeyDown("d")){
+        if(Greenfoot.isKeyDown("3")){
             move(4);
         }
         if(isTouching(Fruit.class)){
@@ -30,5 +29,5 @@ public class Dog extends Actor
         }
     }
 
-}
+}   
 
