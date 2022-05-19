@@ -27,6 +27,7 @@ public class Dog extends Actor
         }
         if(isTouching(Fruit.class)){
             removeTouching(Fruit.class);
+            placeFruit();
         }
     }
 
