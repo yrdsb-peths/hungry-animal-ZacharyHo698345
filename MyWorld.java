@@ -22,19 +22,18 @@ public class MyWorld extends World
         addObject(k, 100, 350);
         Pig r = new Pig("Raymond");
         addObject(r, 500, 350);
-        
+
         Fruit berry = new Fruit();
         addObject(berry, 100, 100);
         placeFruit();
-        
-        public void placeFruit()
-        {
-            int x = Greenfoot.getRandomNumber(600);
-            int y = 0;
-            Fruit berry = new Fruit();
-            addObject(berry, x, y);
-        }
-        
-        
     }
+
+    public void placeFruit()
+    {
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        Fruit berry = new Fruit();
+        addObject(berry, x, y);
+    }
+
 }
