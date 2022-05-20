@@ -23,9 +23,16 @@ public class MyWorld extends World
         Pig r = new Pig("Raymond");
         addObject(r, 500, 350);
 
-        Fruit berry = new Fruit();
-        addObject(berry, 100, 100);
-        placeFruit();
+        for(int i = 0; i < 2; i++)
+        {
+            placeFruit();
+
+        }
+        for(int i = 0; i < 2; i++)
+        {
+            placeFruit2();
+
+        }
     }
 
     public void placeFruit()
@@ -36,5 +43,20 @@ public class MyWorld extends World
         addObject(berry, x, y);
     }
 
-}
+    public void placeFruit2()
+    {
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        Fruit2 apple = new Fruit2();
+        addObject(apple, x, y);
+    }
 
+    public void elimFruit()
+    {
+        int y = getActor()
+        if( y > 500)
+        {
+            removeObject(Fruit.class);
+        }
+    }
+}

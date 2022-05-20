@@ -27,7 +27,13 @@ public class Dog extends Actor
         }
         if(isTouching(Fruit.class)){
             removeTouching(Fruit.class);
-            placeFruit();
+            MyWorld world = (MyWorld) getWorld();
+            world.placeFruit();
+        }
+        if(isTouching(Fruit2.class)){
+            removeTouching(Fruit2.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.placeFruit2();
         }
     }
 
