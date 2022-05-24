@@ -17,6 +17,12 @@ public class Fruit2 extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
-        setLocation(x, y + 4);
+        setLocation(x, y + 2);
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }    
 }

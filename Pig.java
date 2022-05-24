@@ -28,6 +28,13 @@ public class Pig extends Actor
             removeTouching(Fruit.class);
             MyWorld world = (MyWorld) getWorld();
             world.placeFruit();
+            world.increaseScore();
+        }
+        if(isTouching(Fruit2.class)){
+            removeTouching(Fruit2.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.placeFruit2();
+            world.increaseScore();
         }
     }
 
