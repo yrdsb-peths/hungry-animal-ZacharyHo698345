@@ -11,8 +11,6 @@ public class Dog extends Actor
 {
     String name;
     
-    GreenfootSound sound = new GreenfootSound("bearmp3.mp3");
-    
     public Dog(String name)
     {
         this.name = name;
@@ -32,14 +30,14 @@ public class Dog extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.placeFruit();
             world.increaseScore();
-            sound.play();
+            Greenfoot.playSound("sounds/bearmp3");
         }
         if(isTouching(Fruit2.class)){
             removeTouching(Fruit2.class);
             MyWorld world = (MyWorld) getWorld();
             world.placeFruit2();
             world.increaseScore();
-            sound.play();
+            Greenfoot.playSound("sounds/bearmp3");
         }
     }
 
