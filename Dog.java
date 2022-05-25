@@ -10,6 +10,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dog extends Actor
 {
     String name;
+    GreenfootImage[] idle = new GreenfootImage[5];
+    
+    public Dog()
+    {
+        for(int i=0; i<5; i++)
+        {
+            idle[i] = new GreenfootImage("images/dog_idle/idle" + i +".png");
+        }
+        setImage(idle[0]);
+        
+    }
+    int imageIndex = 0;
+    public void animateDog()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
     
     public Dog(String name)
     {
@@ -30,15 +47,16 @@ public class Dog extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.placeFruit();
             world.increaseScore();
-            Greenfoot.playSound("sounds/bearmp3");
+            Greenfoot.playSound("sounds/bearmp3.mp3");
         }
         if(isTouching(Fruit2.class)){
             removeTouching(Fruit2.class);
             MyWorld world = (MyWorld) getWorld();
             world.placeFruit2();
             world.increaseScore();
-            Greenfoot.playSound("sounds/bearmp3");
+            Greenfoot.playSound("sounds/bearmp3.mp3");
         }
+        animateDog();
     }
 
 }
