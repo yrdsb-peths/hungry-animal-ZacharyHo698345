@@ -54,7 +54,7 @@ public class MyWorld extends World
     public void placeFruit()
     {
         int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
+        int y = 30;
         Fruit berry = new Fruit();
         addObject(berry, x, y);
     }
@@ -62,7 +62,7 @@ public class MyWorld extends World
     public void placeFruit2()
     {
         int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
+        int y = 30;
         Fruit2 apple = new Fruit2();
         addObject(apple, x, y);
     }
