@@ -16,7 +16,7 @@ public class Dog extends Actor
     {
         for(int i=0; i<5; i++)
         {
-            idle[i] = new GreenfootImage("images/dog_idle/idle" + i +".png");
+            idle[i] = new GreenfootImage("images/dog_idle/tile00" + i +".png");
         }
         setImage(idle[0]);
         
