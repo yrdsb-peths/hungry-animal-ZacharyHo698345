@@ -56,7 +56,7 @@ public class Dog extends Actor
             world.increaseScore();
             Greenfoot.playSound("sounds/bearmp3.mp3");
         }
-        animateDog();
+        
     }
 
 }
